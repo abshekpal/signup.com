@@ -1,252 +1,414 @@
 <!doctype html>
 <html>
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/ed8d1bbf30.js" crossorigin="anonymous"></script>
 
     <style>
         * {
-            padding:0;
-            margin:0;
+            padding: 0;
+            margin: 0;
             box-sizing: border-box;
             /* font-family: 'Sen', sans-serif; */
             font-family: 'Montserrat', sans-serif;
         }
+
         body {
-            width:100%;
-            height:100vh;
-            background:#fafafa;
+            width: 100%;
+            height: 100vh;
+            background: #fafafa;
         }
-        .wrapper{
-            width:100%;
-            height:100vh;
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
             display: flex;
         }
-        .left{
-            width:50%;
-            background:url("./image/dario-veronesi-lUO-BjCiZEA-unsplash.jpg");
-            background-size:cover;
+
+        .left {
+            width: 50%;
+            background: url("./image/dario-veronesi-lUO-BjCiZEA-unsplash.jpg");
+            background-size: cover;
             background-position: center;
             color: #fff;
             position: relative;
         }
-        .left .sec1{
+
+        .left .sec1 {
             position: absolute;
-            top:0;
-            padding:60px;
+            top: 0;
+            padding: 60px;
         }
-        .left .sec1 h1{
-            font-size:60px;
+
+        .left .sec1 h1 {
+            font-size: 60px;
             font-weight: 800;
         }
-        .left .sec1 p, .sec2 p{
-            font-size:14px;
-            color:#ffffffb9;
+
+        .left .sec1 p,
+        .sec2 p {
+            font-size: 14px;
+            color: #ffffffb9;
             font-family: 'Sen', sans-serif;
         }
-        .left .sec2{
-            padding:60px;
+
+        .left .sec2 {
+            padding: 60px;
             position: absolute;
-            bottom:0;
+            bottom: 0;
         }
-        .left .sec2 p:before{
+
+        .left .sec2 p:before {
             content: "";
         }
-        .left .sec2 p{
-            max-width:400px;
+
+        .left .sec2 p {
+            max-width: 400px;
         }
-        .sec2 span{
-            font-size:13px;
-            color:#ffffffb9;
-            position:relative;
+
+        .sec2 span {
+            font-size: 13px;
+            color: #ffffffb9;
+            position: relative;
         }
-        .sec2 span:before{
-            content:"";
-            position:absolute;
-            right:-60px;
-            top:50%;
-            background:#ffffffb9;
-            width:50px;
-            height:2px;
-    
+
+        .sec2 span:before {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: 50%;
+            background: #ffffffb9;
+            width: 50px;
+            height: 2px;
         }
-        .right{
-            padding:30px;
-            width:50%;
+
+        .sec2 i {
+            font-size: 25px;
         }
-        .contactForm{
-            width:100%;
-            height:100%;
+
+        .right {
+            padding: 30px;
+            width: 50%;
+        }
+
+        .contactForm {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        h2{
-            font-size:25px;
+
+        h2 {
+            font-size: 25px;
         }
+
         .right p {
-            font-size:13px;
-            color:#a8a8a8;
+            font-size: 13px;
+            color: #a8a8a8;
             margin-bottom: 10px;
-            position:relative;
+            position: relative;
         }
-        .line{
-            width:100px;
-            height:2px;
-            background:#000;
+
+        .line {
+            width: 100px;
+            height: 2px;
+            background: #000;
             margin-bottom: 20px;
         }
-        .right form{
-            margin:0 auto;
+
+        .right form {
+            margin: 0 auto;
+            display: block;
         }
-        .right .formGroup{
-            margin-bottom:25px;
+
+        .right .formGroup {
+            margin-bottom: 10px;
+            padding-bottom: 20px;;
+            position: relative;
         }
-        .right .formGroup input{
-            padding:10px;
-            width:400px;
-            font-size:12px;
-            outline:none !important;
-            background:#e9e9e9;
-            color:#000;
+
+        .right .formGroup input {
+            padding: 10px;
+            width: 100%;
+            font-size: 14px;
+            outline: none !important;
+            background: #e9e9e9;
+            color: #000;
+            border:2px solid #f0f0f0;
             border-radius: 4px;
-            border:none !important;
+            display: block;
         }
-        .right .formGroup input:focus{
-            
+        .right .formGroup.success input{
+            border-color:#2ecc71;
         }
-       h5{
-           font-size:14px;
-           margin-bottom: 5px;
-       }
-       .btn{
-           padding:10px;
-           width:200px;
-           border-radius: 4px;
-           font-weight:bold;
-           letter-spacing: 2px;
-           background:#ff6d6d;
-           outline: none;
-           border:none;
-           cursor: pointer;
-           font-size:13px;
-       }
-       .btn:hover{
-           background:#ff6d6d9f;
-       }
-       .btnGroup{
-           display: flex;
-           align-items: center;
-           justify-content: space-between;
-           margin-top:30px;
-       }
-       .btnGroup img{
-            width:30px;
-            height:30px;
-       }
-       @media (max-width:600px){
-           .wrapper{
-              display: block;
-              height:auto;
-           }
-           .left, .right{
-               width:100%;
-               height:100vh;
-           }
-           .wrapper .left .sec1, .wrapper .left .sec2{
-               padding:50px 20px;
-               /* position: unset; */
-           }
-           .wrapper .left .sec2{
-               position: absolute;
-               bottom:10px;
-           }
-           .right{
-               padding:20px;
-           }
-           .right .formGroup input{
-               width:100%;
-           }
-           form{
-               width:100%;
-           }
-       }
-       @media (max-width: 992px){
-        .wrapper{
-              display: block;
-              height:auto;
-           }
-           .left, .right{
-               width:100%;
-           }
-           .left .sec1, .left .sec2{
-               padding:50px;
-               position: unset;
-           }
-           .right{
-               padding:50px;
-           }
-           .right .formGroup input{
-               width:100%;
-           }
-           Form{
-               width:100%;
-           }
-       }
+        .right .formGroup.error input{
+            border-color:#e74c3c;
+        }
+        .right .formGroup.success i.fa-check-circle{
+            visibility: visible;
+            color:#2ecc71;
+        }
+        .right .formGroup.error i.fa-exclamation-circle{
+            visibility: visible;
+            color:#e74c3c;
+        }
+        .right .formGroup.error small{
+            visibility: visible;
+            color:#e74c3c;
+        }
+        .right .formGroup i{
+            position: absolute;
+            top:35px;
+            right:10px;
+            visibility: hidden;
+
+        }
+        .right .formGroup small{
+            position: absolute;
+            bottom:0;
+            left:0;
+            visibility:;
+        }
+
+        input::placeholder {
+            color: #8a8a8a;
+        }
+
+        h5 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            padding: 10px;
+            width: 200px;
+            border-radius: 4px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            background: #ff6d6d;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn:hover {
+            background: #ff6d6d9f;
+        }
+
+        .btnGroup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btnGroup img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width:600px) {
+            .wrapper {
+                display: block;
+                height: auto;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .wrapper .left .sec1,
+            .wrapper .left .sec2 {
+                padding: 50px 20px;
+            }
+
+            .wrapper .left .sec2 {
+                position: absolute;
+                bottom: 10px;
+            }
+
+            .right {
+                padding: 20px;
+            }
+
+            .right .formGroup input {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .wrapper {
+                display: block;
+                height: auto;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left .sec1,
+            .left .sec2 {
+                padding: 50px;
+                position: unset;
+            }
+
+            .right {
+                padding: 50px;
+            }
+
+            .right .formGroup input {
+                width: 100%;
+            }
+
+            Form {
+                width: 100%;
+            }
+        }
     </style>
-    </head>
+</head>
+
 <body>
     <div class="wrapper">
         <div class="left">
             <div class="sec1">
                 <h1>Hello<br>Word!!!</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. ipsum repellat ex recusandae nesciunt maxime magni autem.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. ipsum repellat ex recusandae nesciunt
+                    maxime magni autem.</p>
             </div>
-           <div class="sec2">
-            <i class="fa fa-quote-left" aria-hidden="true"></i>
-               <p>Dream interpretation has many forms, it can be done for the sake of fun, hobby or can be taken up as a serious career.</p>
-               <span>Unknown</span>
-           </div>
+            <div class="sec2">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                <p>Dream interpretation has many forms, it can be done for the sake of fun, hobby or can be taken up as
+                    a serious career.</p>
+                <span>Unknown</span>
+            </div>
         </div>
         <div class="right">
             <div class="contactForm">
-                <form action="" class="">
+                <form action="" id="form" method="GET">
                     <h2>Get started absolutely free</h2>
                     <p>Free forever no extra charges</p>
                     <div class="line"></div>
-                        <div class="formGroup">
-                            <h5>Name</h5>
-                            <input type="text" name="" id="" placeholder="Enter name">
-                            <div class="feedback" id="nameChk"></div>
-                        </div>
-                        <div class="formGroup">
-                            <h5>Email</h5>
-                            <input type="text" name="" id="" placeholder="Enter email">
-                            <div class="feedback" id="emailChk"></div>
-                        </div>
-                        <div class="formGroup">
-                            <h5>Password</h5>
-                            <input type="password" name="" id="" placeholder="Enter password">
-                            <div class="feedback" id="passwordChk"></div>
-                        </div>
-                        <div class="formGroup">
-                            <h5>Mobile Phone</h5>
-                            <input type="text" name="" id="" placeholder="Enter number">
-                            <div class="feedback" id="numberChk"></div>
-                        </div>
-                        <div class="btnGroup">
-                            <input type="button" value="SUBMIT" class="btn">
-                            <h5>Or</h5>
-                            <a href="https://gmail.com/" target="_blank"><img src="./image/google.png" alt=""></a>
-                            <a href="https://www.facebook.com/" target="_blank"><img src="./image/facebook.png" alt=""></a>
-                        </div>
+                    <div class="formGroup">
+                        <h5>Name</h5>
+                        <input type="text" id="name" placeholder="Enter name">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        <small class="feedback" id="nameChk"></small>
+                    </div>
+                    <div class="formGroup">
+                        <h5>Email</h5>
+                        <input type="text" id="email" placeholder="Enter email">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        <small class="feedback" id="emailChk"></small>
+                    </div>
+                    <div class="formGroup">
+                        <h5>Password</h5>
+                        <input type="password" id="password" placeholder="Enter password">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        <small class="feedback" id="passwordChk"></small>
+                    </div>
+                    <div class="formGroup">
+                        <h5>Mobile Phone</h5>
+                        <input type="text" id="phone" placeholder="Enter number">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        <small class="feedback" id="phoneChk"></small>
+                    </div>
+                    <div class="btnGroup">
+                        <input type="submit" value="SUBMIT" class="btn">
+                        <h5>Or</h5>
+                        <a href="https://gmail.com/" target="_blank"><img src="./image/google.png" alt=""></a>
+                        <a href="https://www.facebook.com/" target="_blank"><img src="./image/facebook.png" alt=""></a>
+                    </div>
                 </form>
             </div>
-            
         </div>
     </div>
+
+    <script type="text/javascript">
+        document.getElementById('name').addEventListener('blur', validateName);
+        document.getElementById('email').addEventListener('blur', validateEmail);
+        document.getElementById('password').addEventListener('blur', validatePassword);
+        document.getElementById('phone').addEventListener('blur', validatePhone);
+        
+        function validateName(){
+            const name = document.getElementById('name');
+            const re = /^[a-zA-Z]{2,10}$/;
+
+            if(!re.test(name.value)){
+                document.getElementById('nameChk').innerHTML = "Name must be between 2 and 10 characters";
+                name.parentElement.classList.add('error');
+                name.parentElement.classList.remove('success');
+            }
+            else{
+                document.getElementById('nameChk').innerHTML = "";
+                name.parentElement.classList.add('success');
+                name.parentElement.classList.remove('error');
+            }
+        }
+
+        function validateEmail(){
+            const email = document.getElementById('email');
+            const re = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9_\.\-]+)\.([a-zA-Z]{2,5})$/;
+
+            if(!re.test(email.value)){
+                document.getElementById('emailChk').innerHTML = "Enter valid email";
+                email.parentElement.classList.add('error');
+                email.parentElement.classList.remove('success');
+            }
+            else{
+                document.getElementById('emailChk').innerHTML = "";
+                email.parentElement.classList.add('success');
+                email.parentElement.classList.remove('error');
+            }
+        }
+
+        function validatePassword(){
+            const password = document.getElementById('password');
+            const re = /^[a-zA-Z]{2,10}$/;
+
+            if(!re.test(password.value)){
+                document.getElementById('passwordChk').innerHTML = "Enter valid password";
+                password.parentElement.classList.add('error');
+                password.parentElement.classList.remove('success');
+            }
+            else{
+                document.getElementById('passwordChk').innerHTML = "";
+                password.parentElement.classList.add('success');
+                password.parentElement.classList.remove('error');
+            }
+        }
+        function validatePhone(){
+            const name = document.getElementById('phone');
+            const re = /^[1-9]\d{9}$/;
+
+            if(!re.test(phone.value)){
+                document.getElementById('phoneChk').innerHTML = "Enter valid phone number";
+                phone.parentElement.classList.add('error');
+                phone.parentElement.classList.remove('success');
+            }
+            else{
+                document.getElementById('phoneChk').innerHTML = "";
+                phone.parentElement.classList.add('success');
+                phone.parentElement.classList.remove('error');
+            }
+        }
+    </script>
 </body>
 </html>
